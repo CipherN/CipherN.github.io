@@ -9,7 +9,7 @@
 
 
 
-<title>Anaconda Command | Struggle in Study</title>
+<title>Pharmaceutical QA Roadmap | Struggle in Study</title>
 
 
 
@@ -105,73 +105,11 @@
             <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Anaconda Command</h1>
+            <h1 class="post-title">Pharmaceutical QA Roadmap</h1>
             
                 <div class="post-meta">
                     
@@ -180,7 +118,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">October 1, 2019&nbsp;&nbsp;21:02:51</a>
+                        Date: <a href="#">October 2, 2019&nbsp;&nbsp;22:17:47</a>
                         </span>
                     
                     
@@ -189,28 +127,7 @@
         </header>
 
         <div class="post-content">
-            <p><strong>As we all know that anaconda is convenient to manage the version of Python and all third-part packages for Python. So this article is written for the command introduction in Anaconda.</strong></p>
-<h2 id="Environment-Management"><a href="#Environment-Management" class="headerlink" title="Environment Management"></a>Environment Management</h2><p>说明：下面出现的my-environment均代表需要执行操作的环境名称，USERNAME代表anaconda账户名</p>
-<ul>
-<li><p>导出环境：</p>
-<p>conda env export -n my-environment -f my-environment.yml</p>
-</li>
-<li><p>上传环境：</p>
-<p>anaconda upload my-environment.yml</p>
-</li>
-<li><p>网页查看：</p>
-<p><a href="http://envs.anaconda.org/USERNAME" target="_blank" rel="noopener">http://envs.anaconda.org/USERNAME</a></p>
-</li>
-<li><p>下载环境：</p>
-<p>conda env create user/my-environment</p>
-<p>source activate my-environment</p>
-</li>
-<li><p>环境重命名：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda create -n BB(new) --clone AA(old)</span><br><span class="line">conda remove -n AA(old) --all</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
+            
         </div>
 
         
@@ -224,7 +141,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://yoursite.com/2019/10/01/Anaconda-Command/">http://yoursite.com/2019/10/01/Anaconda-Command/</a></span>
+                        <span><a href="http://yoursite.com/2019/10/02/Pharmaceutical-QA-Roadmap/">http://yoursite.com/2019/10/02/Pharmaceutical-QA-Roadmap/</a></span>
                     </p>
                 
                 
@@ -247,10 +164,6 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
-                    
-                        <a href="/tags/Software/"># Software</a>
-                    
-                        
                 </span>
             </div>
             <div>
@@ -261,8 +174,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2019/10/02/Project-Management-Roadmap/">Project Management Roadmap</a>
+                <a class="prev" rel="prev" href="/2019/10/02/Microsoft-Project-Roadmap/">Microsoft Project Roadmap</a>
             
+            
+            <a class="next" rel="next" href="/2019/10/02/Project-Management-Roadmap/">Project Management Roadmap</a>
             
         </section>
 
