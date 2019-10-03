@@ -105,6 +105,68 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
@@ -127,7 +189,56 @@
         </header>
 
         <div class="post-content">
-            
+            <h2 id="我们在讨论制药行业的时候，总是避不开人机料法环五个方面，这是一个传统的思考问题的思路，尤其在偏差调查时，想要全面地找出异常情况的表象原因，肯定会首先想到这五个方面，当然也有一部分人会加入“测”这一环节，也就是QC，所以想要了解制药工厂到底是怎么运作的，先要对这五个方面有个大致的了解。"><a href="#我们在讨论制药行业的时候，总是避不开人机料法环五个方面，这是一个传统的思考问题的思路，尤其在偏差调查时，想要全面地找出异常情况的表象原因，肯定会首先想到这五个方面，当然也有一部分人会加入“测”这一环节，也就是QC，所以想要了解制药工厂到底是怎么运作的，先要对这五个方面有个大致的了解。" class="headerlink" title="我们在讨论制药行业的时候，总是避不开人机料法环五个方面，这是一个传统的思考问题的思路，尤其在偏差调查时，想要全面地找出异常情况的表象原因，肯定会首先想到这五个方面，当然也有一部分人会加入“测”这一环节，也就是QC，所以想要了解制药工厂到底是怎么运作的，先要对这五个方面有个大致的了解。"></a>我们在讨论制药行业的时候，总是避不开人机料法环五个方面，这是一个传统的思考问题的思路，尤其在偏差调查时，想要全面地找出异常情况的表象原因，肯定会首先想到这五个方面，当然也有一部分人会加入“测”这一环节，也就是QC，所以想要了解制药工厂到底是怎么运作的，先要对这五个方面有个大致的了解。</h2><h2 id="人员"><a href="#人员" class="headerlink" title="人员"></a>人员</h2><ul>
+<li>健康状况</li>
+<li>经验、学历要求</li>
+<li>Training &amp; Retraining</li>
+<li>授权</li>
+</ul>
+<hr>
+<h2 id="设施设备"><a href="#设施设备" class="headerlink" title="设施设备"></a>设施设备</h2><ul>
+<li>设备确认</li>
+<li>设备清洁</li>
+<li>周期性维护</li>
+<li>维修</li>
+<li>备品、备件</li>
+</ul>
+<hr>
+<h2 id="物料"><a href="#物料" class="headerlink" title="物料"></a>物料</h2><ul>
+<li>压缩空气</li>
+<li>氮气</li>
+<li>纯化水</li>
+<li>注射用水</li>
+<li>纯蒸汽</li>
+<li>工业蒸汽</li>
+<li>API</li>
+<li>辅料</li>
+<li>半成品</li>
+<li>成品</li>
+<li>化学试剂</li>
+<li>包装材料</li>
+<li>易耗品</li>
+</ul>
+<hr>
+<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><ul>
+<li>法律、法规</li>
+<li>标准操作规程</li>
+<li>操作指南</li>
+<li>表单</li>
+<li>工艺规程</li>
+<li>批记录</li>
+<li>质量标准</li>
+<li>批检验记录</li>
+</ul>
+<hr>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li></li>
+<li>监测频率</li>
+<li>监测项目</li>
+<li>接受标准</li>
+<li></li>
+</ul>
+
         </div>
 
         
