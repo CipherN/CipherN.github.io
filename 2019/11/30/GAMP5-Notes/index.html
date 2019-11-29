@@ -105,6 +105,68 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
@@ -127,7 +189,217 @@
         </header>
 
         <div class="post-content">
-            
+            <h1 id="GAMP-5-A-Risk-Based-Approach-to-Compliant-GxP-Computerized-System"><a href="#GAMP-5-A-Risk-Based-Approach-to-Compliant-GxP-Computerized-System" class="headerlink" title="GAMP 5 A Risk-Based Approach to Compliant GxP Computerized System"></a>GAMP 5 A Risk-Based Approach to Compliant GxP Computerized System</h1><h2 id="1-INTRODUCTION"><a href="#1-INTRODUCTION" class="headerlink" title="1  INTRODUCTION"></a>1  INTRODUCTION</h2><h3 id="1-1-Rationale-for-GAMP-5"><a href="#1-1-Rationale-for-GAMP-5" class="headerlink" title="1.1  Rationale for GAMP 5"></a>1.1  Rationale for GAMP 5</h3><p>This version of GAMP has been significantly updated to align with the concept and terminology of recent regulatory and industry development including:</p>
+<ul>
+<li><strong>ICH</strong> Guidance Q8, Q9 and the forthcoming Q10</li>
+<li>Product Quality Lifecycle Implementation <strong>PQLI</strong></li>
+<li>US FDA <strong>cGMPs</strong> for the 21th Century Initiative and associated guidance</li>
+<li>Pharmaceutical Inspection Cooperation Scheme <strong>PIC/S</strong> Guidance on Good Practice for Computerised System in Regualted GxP Environments</li>
+<li>Emerging industry standards such as those produced by the <strong>ASTM E55</strong> Commitee promoting process understanding, control, and capability for drug development and manufacture</li>
+</ul>
+<p>These regulatory and industry developments focus attention on <strong><em>patient safety</em></strong>, <strong><em>product quality</em></strong> and <em>data integrity</em>. This is a key driver for GAMP 5</p>
+<p><a href>Figure 1.1: Drivers for GAMP 5</a></p>
+<h3 id="1-2-New-and-Revised-Mterial"><a href="#1-2-New-and-Revised-Mterial" class="headerlink" title="1.2  New and Revised Mterial"></a>1.2  New and Revised Mterial</h3><p>Particular emphasis is given in this Guide on providing a cost effective approach to compliance and demonstrating fitness for intended use. To support this, new and updated guidance is given on:</p>
+<ul>
+<li>a complete system life cycle approach as part of a <strong>QMS</strong>, from concept to retirement</li>
+<li>a scaleable approach to achive and maintain GxP compliance driven by novelty, complexity, risk to patient safety, product quality, and data integrity</li>
+<li>clarifying the role of Quality, introducing the roles of process owner, system owner and Subject Matter Experts <strong>SMEs</strong></li>
+<li>in the GMP environment, stressing the importance of clear requiremnts based on a thorough understanding of the science and Critical Quality Attributes <strong>CQAs</strong> of the development and manufacturing process and drug product, to facilitate the adoption of Quality by Design <strong>QbD</strong> approach</li>
+<li>the leveraging of supplier documentation and knowledge to avoid unnecessary duplication</li>
+<li>improving efficiency by promoting practical and effective interpretation of GAMP guidance</li>
+<li>maximazing use of documentation from activities, such as development and commissioning, as verification evidence</li>
+<li>the importance of effective governace to achieve and maintain compliance</li>
+<li>identifying opportunities for process and system improvements based on periodic review, root-cause analysis, and Corrective and Preventive Action <strong>CAPA</strong></li>
+</ul>
+<p>New information is provided in specific appendices on the following topic of special interest to industry:</p>
+<ul>
+<li>align with <strong>ASTM E2500</strong></li>
+<li>organizational change</li>
+<li>outsourcing </li>
+<li>electronic batch recording</li>
+<li>end user applications, such as spreadsheets and small databases</li>
+<li>patch management</li>
+</ul>
+<p>In summary, the scope has been widened to include related industries and their suppliers, including biotechnology and systems used in medical device manufacturing (excluding sofeware embedded within the medical devices)</p>
+<h3 id="1-3-Purpose"><a href="#1-3-Purpose" class="headerlink" title="1.3  Purpose"></a>1.3  Purpose</h3><p>The purpose of this Guide is to provide a cost effective framework of good practice to ensure the computerized system are <strong><em>fit for intended use</em></strong> and <strong><em>compliance with applicable regulations</em></strong>. The framework aims to safeguard patient safety, product quality and data integrity, while also delivering business benefit. This Guide also provide suppliers to the life science industry with guidance on the development and maintance of systems by following good practice.</p>
+<p>This Guide is intended for use by regulated companies, suppliers and regulators. Suppliers include providers of sofeware, hardware, equipment, system integration services and IT support services, both internal and external to regulated company.</p>
+<p>This Guide has been designed for use by a wide range of disciplines and responsibilities, including:</p>
+<ul>
+<li>management</li>
+<li>quality unit </li>
+<li>research</li>
+<li>development</li>
+<li>manufacture</li>
+<li>laboratory</li>
+<li>engineering</li>
+<li>IT</li>
+<li>support staff</li>
+<li>all associated suppliers</li>
+</ul>
+<p>GAMP documents are guides and not standards. It is the responsibility of regulated company to establish policies and procedures to meet applicable requirements. Consequently, it is inappropriate for suppliers or products to claim that they are GAMP certified, approved or compliant.</p>
+<h3 id="1-4-Scope"><a href="#1-4-Scope" class="headerlink" title="1.4  Scope"></a>1.4  Scope</h3><p>This Guide applies to computerized systems used in regulated activities covered by:</p>
+<ul>
+<li>GMP (pharmaceutical, including Active Pharmaceutical Ingredient <strong>API</strong>, veterinary and blood)</li>
+<li>Good Clinical Practice GCP</li>
+<li>Good Laboratory Practice GLP</li>
+<li>Good Distribution Practice GDP</li>
+<li>Medical Device Regulation (with the exception of software embedded within medical devices)</li>
+</ul>
+<p>This Guide provides an approach that is suitable for all types of computerized system, focusing on those based on standard and configurable products, but equally applicable to custom(bespoke) applications.</p>
+<p>Not all the activities defined in this Guide will apply to every system. The scaleable approach enables regulated companies to select the appropriate system life cycle activities.</p>
+<h4 id="1-4-1-Supplier-Aspects"><a href="#1-4-1-Supplier-Aspects" class="headerlink" title="1.4.1  Supplier Aspects"></a>1.4.1  Supplier Aspects</h4><p>The computerized system life cycle described in this Guide for a regulated company should not be confused with the need for a defined approach or method for software development, which is tipically the responsibility of the supplier.</p>
+<p>This Guide defines activities and responsibilities expected of the supplier in the provision of products and services. These activities perform an important role in supporting regulated company activities. Thes supplier may be a third party or an internal group of the regulated company.</p>
+<p>Modern system may have a complex supply chain involving multiple suppliers. This Guide aims to meet the needs of eacch group.</p>
+<h3 id="1-5-Business-Benefits"><a href="#1-5-Business-Benefits" class="headerlink" title="1.5  Business Benefits"></a>1.5  Business Benefits</h3><p>There are major business benefits in having a defined processes that delivers systems that are fit for intended use, <strong><em>on time</em></strong>, and <strong><em>within budget</em></strong>. Systems that are well defined and specified are <strong><em>easier to support and maintain</em></strong>, resulting in <strong><em>less downtime</em></strong> and <strong><em>lower maintenance costs</em></strong>.</p>
+<p>Specific benefits to both regulated companies and suppliers include:</p>
+<ul>
+<li>reduction of cost and time taken to achieve and maintain compliance</li>
+<li>early defect identification and resolution leading to reduced impact on cost and schedule</li>
+<li>cost effective operation and maintenance</li>
+<li>effective change management and continuous improvement</li>
+<li>enabling of innovation and adoption of new technology</li>
+<li>providing frameworks for user/supplier co-operation</li>
+<li>assisting suppliers to produce required documentation</li>
+<li>promotion of common system life cycle, language, and terminology</li>
+<li>providing practical guidance and examples</li>
+<li>promoting pragmatic interpretation of regulations</li>
+</ul>
+<h3 id="1-6-Structure"><a href="#1-6-Structure" class="headerlink" title="1.6  Structure"></a>1.6  Structure</h3><h4 id="1-6-1-Overview-of-GAMP-Documentation-Structure"><a href="#1-6-1-Overview-of-GAMP-Documentation-Structure" class="headerlink" title="1.6.1  Overview of GAMP Documentation Structure"></a>1.6.1  Overview of GAMP Documentation Structure</h4><p>This Guide forms part of a family of documents that together provide a powerful and comprehensive body of knowledge covering all aspects of computerized systems good practice and compliance.</p>
+<p><a href>Figure 1.2: GAMP Documentation Structure</a></p>
+<p>The Guide comprises <strong><em>a Main Body</em></strong> and <strong><em>a set of supporting Appendices</em></strong>. </p>
+<p>The <strong><em>Main Body</em></strong> provides principles and a life cycle framework applicable to GxP regulated computerized systems. </p>
+<p>Practical guidance on a wide range of specific topics, such as planning, specification, risk management, testing, operation, and change management is provided in the <strong><em>supporting appendices</em></strong>. A new set of appendices is also provided in this Guide to cover topics of special interest, such as outsourcing and user applications.</p>
+<p>Separate GAMP Good Practice Guides <strong>GPGs</strong> cover the application of these general principles and framework to specific types of systems and platforms. Other <strong>GPGs</strong> provide detailed approaches to specific activities and topics. It is intended that <strong>GPSs</strong> will be updated, where necessary, to align with the key concepts described in this Guide. New <strong>GPGs</strong> also are being developed.</p>
+<h4 id="1-6-2-GAMP-Main-Body-Structure"><a href="#1-6-2-GAMP-Main-Body-Structure" class="headerlink" title="1.6.2  GAMP Main Body Structure"></a>1.6.2  GAMP Main Body Structure</h4><p>The Main Body introduction covers the purpose, scope, benefits, and structure of this Guide. Subsequent sections of the Main Body cover the topics:</p>
+<ul>
+<li>key concepts</li>
+<li>Life cycle approach</li>
+<li>life cycle phases:<ul>
+<li>concepts</li>
+<li>project</li>
+<li>operation</li>
+<li>retirement</li>
+</ul>
+</li>
+<li>science based quality risk management</li>
+<li>regulated company activities:<ul>
+<li>governance for achieving compliance</li>
+<li>system specific activities</li>
+</ul>
+</li>
+<li>supplier activities</li>
+<li>efficiency improvement</li>
+</ul>
+<p>The <strong>key concepts</strong> are five concepts, based on innovation industry thinking, current at the time of publication, that underpin the rest of the document. See ==Section 2== of this Guide.</p>
+<p>The computerized system <strong>life cycle</strong> encompasses all activities from initial concept, and understanding the requirements, through development, release, and operation use, to system retirement. ==Section 3== of this Guide describes these avtivities and how they are related.</p>
+<p>==Section 4== describes the <strong>project life cycle phase</strong> in more detail, including:</p>
+<ul>
+<li>specification, configuration, and coding</li>
+<li>verification</li>
+<li>reporting and release</li>
+</ul>
+<p>The key supporting processes of risk management, change and configuration management, design review, traceability, and document management are also introduced.</p>
+<p><strong>Quality risk management</strong> is a systematic approach for the assessment, control, communication, and review of risks to patient safety, product quality, and data integrity. It is a iterative process applied throughout the entire system life cycle. ==Section 5== of this Guide describes this approach, and how these activities should be based on good science and product and process understanding.</p>
+<p>Effective and consistent <strong>regulated company activities</strong> for individual systems requires a defined organizational and governance framework, covering aspects such as policies, responsibilities, management, and continuous improvement. See ==Section 6== of this Guide.</p>
+<p>While the responsibility for compliance lies with the regulate company, the supplier has a key role to play. An overview of typical <strong>supplier activities</strong> is given in ==Section 7== of this Guide.</p>
+<p>This Guide provides a flexible framework for achieving compliant computerized systems that are fit for use, but the full benefits can be obtained only if the framework is applied effectively in the context of a particular organization. ==Section 8== covers key topics leading to <strong>efficienty improvement</strong>.</p>
+<h2 id="2-KEY-CONCEPTS"><a href="#2-KEY-CONCEPTS" class="headerlink" title="2  KEY CONCEPTS"></a>2  KEY CONCEPTS</h2><h3 id="2-1-Key-Concepts"><a href="#2-1-Key-Concepts" class="headerlink" title="2.1  Key Concepts"></a>2.1  Key Concepts</h3><p>Five key concepts are applied throughout this Guide:</p>
+<ul>
+<li>product and process understanding</li>
+<li>life cycle approach within QMS</li>
+<li>scaleable life cycle activities</li>
+<li>science based quality risk management</li>
+<li>leveraging supplier involvement</li>
+</ul>
+<p>The relationship between these concepts is shown in Figure 2.1.</p>
+<p><a href>Figure 2.1: Key Concepts of this Guide</a></p>
+<h4 id="2-1-1-Product-and-Process-Understanding"><a href="#2-1-1-Product-and-Process-Understanding" class="headerlink" title="2.1.1  Product and Process Understanding"></a>2.1.1  Product and Process Understanding</h4><p>An understanding of the supported process is fundamental to determining system requirements. Product and process understanding is the basis for making science- and risk-based decisions to ensure that the system is fit for its intended use.</p>
+<p>For some manufacturing systems, process requirements depend on a thorough understanding of product characteristics. For these systems, identification of Critical Quality Attributes <strong>CQAs</strong> and related Critical Process Parameters <strong>CPPs</strong> enable process control requirements to be defined.</p>
+<h4 id="2-1-2-Life-Cycle-approach-within-a-QMS"><a href="#2-1-2-Life-Cycle-approach-within-a-QMS" class="headerlink" title="2.1.2  Life Cycle approach within a QMS"></a>2.1.2  Life Cycle approach within a QMS</h4><p>Adopting a complete computerized system life cycle entails defined activities in a systematic way from system conception to retirement. </p>
+<p>As experience is gained in system use, the QMS should enable continuous process and system improvements based on periodic review and evaluation, operational and performance data, and root-cause analysis of failures. Identification improvements and corrective actions should follow change management.</p>
+<p>The life cycle approach is fundamental to this Guide and embodies each of the other key concepts. The life cycle is structured into phases and activities, as described in Section 3 of this Guide.</p>
+<h4 id="2-1-3-Scaleable-Life-Cycle-Activities"><a href="#2-1-3-Scaleable-Life-Cycle-Activities" class="headerlink" title="2.1.3  Scaleable Life Cycle Activities"></a>2.1.3  Scaleable Life Cycle Activities</h4><p>Life cycle activities should be scaled according to:</p>
+<ul>
+<li>system impact on patient safety, product quality and data integrity (Risk Assessment)</li>
+<li>system complexity and novelty (architectures and categorization of system components)</li>
+<li>outcomes of supplier assessment (supplier capability)</li>
+</ul>
+<p>Business impact also influence the scaling of life cycle activities. The strategy should be clearly defined in a plan and follow established and approved policies and procedures.</p>
+<h4 id="2-1-4-Science-Based-Quality-Risk-Management"><a href="#2-1-4-Science-Based-Quality-Risk-Management" class="headerlink" title="2.1.4 Science Based Quality Risk Management"></a>2.1.4 Science Based Quality Risk Management</h4><p>Application of Quality Risk Management enables efforts to be focused on critical aspects of a computerized system in a controlled and justified manner. </p>
+<p>Quality Risk Management should be based on clear process understanding and potential impact on patient safety, product quality and data integrity. For systems controlling or mornitoring CPPs, these should be traceable to CQAs, and ultimately back to the relevant regulatory submissions for manufacturing systems.</p>
+<p>Qualitatiive and quantitative techniques may be used to identify and manage risks. Control are developed to reduce risks to an acceptable level. Implemented controls are monitored during operation to ensure ongoing effectiveness. </p>
+<h4 id="2-1-5-Leveraging-Supplier-Involvement"><a href="#2-1-5-Leveraging-Supplier-Involvement" class="headerlink" title="2.1.5  Leveraging Supplier Involvement"></a>2.1.5  Leveraging Supplier Involvement</h4><p>Regulated companies shoule maximize supplier involvement throughout the system life cycle in order to leverage knowledge, experience, and documentation, subject to satifactory supplier assessment.</p>
+<p>The supplier may assist with requirements gathering, risk assessments, the creation of functional and other specifications, system configuration, testing, support, and maintenance.</p>
+<p>Planning should determine how best to use supplier documentation, including existing test documentation, to avoid wasted effort and duplication.</p>
+<p>Justification for the use of supplier documentation should be provided by the satisfactory outcome of supplier assessment, which may include supplier audit.</p>
+<p>Documentation should be assessed for <strong><em>suitability, accuracy and completeness</em></strong>.</p>
+<h3 id="2-2-Key-Terms"><a href="#2-2-Key-Terms" class="headerlink" title="2.2 Key Terms"></a>2.2 Key Terms</h3><p><strong>Computerized System</strong></p>
+<p>A computerized system consists of the hardware, software, and network components, together with the controlled functions and associated documentation.</p>
+<p><a href>Figure 2.2: Computerized System - from <strong>PIC/S</strong> Guidance</a></p>
+<p><strong>Computerized System Validation</strong></p>
+<p>Achieving and maintaining compliance with applicable GxP regulations and fitness for intended use by:</p>
+<ul>
+<li>the adoption of principles, approaches, and life cycle activities within the framework of validation plans and reports</li>
+<li>the application of appropriate operational controls throughout the life of the system</li>
+</ul>
+<p><strong>Process Owner</strong></p>
+<p>The person ultimately responsible for the business process or processes being managed. This person is usually <strong>the head of functional unit or department using that system</strong>, although the role should be based on specific knowledge of the <strong><em>process</em></strong> rather than position in the organization. Responsibility for control of system access should be agreed between process and system owner. In some cases, the process owner may be also the system owner. Ensure that the CS and its operation is in compliance and fit for intended use in accordance with applicable SOPs.</p>
+<p><strong>System Owner</strong></p>
+<p>The person ultimately responsible for the availability, support and maintenance of system, and for the security of the data residing on that system. This person is usually <strong>the head of department responsible for support and maintenance</strong> although the role should be based on specific knowledge of the <strong><em>system</em></strong> rather than position in the organization. Ensure that the CS is supported and maintained in accordance with appropriate SOPs.</p>
+<p><strong>Subject Matter Expert</strong></p>
+<p>Those individuals with specific experitise in a particular area or field. SMEs should take the lead role in the verification of CS. SME responsibilities include planning and defining verification strategies, defining acceptance criteria, selection of appropriate test methods, execution of verification tests, and reviewing results. (ASTM E2500) </p>
+<h2 id="3-LIFE-CYCLE-APPROACH"><a href="#3-LIFE-CYCLE-APPROACH" class="headerlink" title="3  LIFE CYCLE APPROACH"></a>3  LIFE CYCLE APPROACH</h2><p>Compliance with regulatory requirements and fitness for intended use may be achieved by adopting a life cycle approach following good practice as defined in this Guide.</p>
+<p>A life cycle approach entails defining and performing activities in a systematic way from conception, understanding the requirements, through development, release, and operational use, to system retirement.</p>
+<p><a href>Figure 3.1: The Specification, Design, and Verification Process</a></p>
+<p>This section of the Guide introduce the CS life cycle, a general approach to specification and verification, and framework for CS validation.</p>
+<h3 id="3-1-CS-Life-Cycle"><a href="#3-1-CS-Life-Cycle" class="headerlink" title="3.1  CS Life Cycle"></a>3.1  CS Life Cycle</h3><p>The life cycle for any system consists of four major phases:</p>
+<ul>
+<li>concept</li>
+<li>project</li>
+<li>operation</li>
+<li>retirement</li>
+</ul>
+<p><strong>Concept Phase</strong> </p>
+<p>The regulated company consider opportunities to automate one or more business processes based upon business need and benefits. Typically, at this phase, <em>initial requirements</em> will be developed and potential solutions considered. From an initial understanding of scope, costs, and benefits, a decision is made on whether to proceed to the project phase.</p>
+<p><strong>Project Phase</strong></p>
+<p>The project phase involve planning, supplier assessment and selection, various levels of specification, configuration (or coding for custom application), and verification leading to acceptance and release for operation. Risk Management is applied to identify risks and to remove or reduce the to an acceptance level.</p>
+<p><strong>Operation Phase</strong></p>
+<p>Typically, it is the longest phase and is managed by the use of defined, up to date, operational procedures applied by personnel who have appropriate training, education and experience. The management of changes of different impact, scope, and complexity is an important activity during this phase.</p>
+<p><strong>Retirement Phase</strong></p>
+<p>The final phase involves decisions about data retention, migration, or destruction, and the management of these processes.</p>
+<p>Supplier of products and services should be involved as appropriate throughout the life cycle. It may be appropriate to delegate many of the activities to supplier, subject to satisfactory supplier assessment and control measures.</p>
+<p><a href>Figure 3.2: Life Cycle Phases</a></p>
+<p><strong>An inventory of CS should be maintained.</strong> </p>
+<p>GxP assessment should performed at the beginning of the project stage to determine whether a system is GxP regulated, and if so, which specific regulations apply, and to which parts of the system they are applicable. This should be performed as part of the initial system risk assessment (Step 1 as described in Section 5 of this Guide). </p>
+<p>For similar system, it may be appropriate to base the GxP assessment on the results of a previous assessment provided the regulated company has an appropriate established procedure.</p>
+<h3 id="3-2-Specification-and-Verification"><a href="#3-2-Specification-and-Verification" class="headerlink" title="3.2  Specification and Verification"></a>3.2  Specification and Verification</h3><p>As shown in Figure 3.3, the specification activities have equivalent verification steps to determine whether the specification has been met.</p>
+<p><a href>Figure 3.3: A General Approach for Achieving Compliance and Fitness for Intended use</a></p>
+<p>Specific examples showing tipical activities for different types of systems are provided in Section 4 of this Guide.</p>
+<h3 id="3-3-CS-Validation-Framework"><a href="#3-3-CS-Validation-Framework" class="headerlink" title="3.3  CS Validation Framework"></a>3.3  CS Validation Framework</h3><p>This framework is based on system specific validation plans and reports and the application of appropriate  operational controls. Validation plans and reports provide a disciplined and consistant approach to meeting regulatory requirements, leading to appropriate documentation at right level. Such documents are valuable both in preparing for, and during, regulatory inspections.</p>
+<p>Where a CS is regarded as one component of a wider manufacturing process or system, particularly in a integrated <strong>QbD</strong> environment, specific and separate CS validation may not be necessary. This environment requires both product and process understanding and that the CPP can be accurately and reliably predicted and controlled over the design space. In such a case, the fitness for intended use of the CS within the process may be adequately demonstrated by documented engineering or project activities together with subsequent Process Validation <strong>PV</strong> or continuous quality verification of the overall process or system. The same principles applies to the adoption of Process Analytical Technology <strong>PAT</strong>.</p>
+<p>For automated manufacturing equipment, separate CS validation should be avoided. CS specification and verification should be part of an integrated engineering approach to ensure compliance and fitness for intended use of <strong>the completed automated equipment</strong>.</p>
+<h2 id="4-LIFE-CYCLE-PHASES"><a href="#4-LIFE-CYCLE-PHASES" class="headerlink" title="4  LIFE CYCLE PHASES"></a>4  LIFE CYCLE PHASES</h2><p>This Section <strong><em>further describes</em></strong> the phases of the CS Life Cycle introduced in Section 3 of this Guide.</p>
+<h3 id="4-1-Concept"><a href="#4-1-Concept" class="headerlink" title="4.1  Concept"></a>4.1  Concept</h3><p>Activities in this phase will depend on the company approach to initialting and justifying the project commencement. Generally, these activities are out of the scope of the GAMP. However, <strong>gaining the management commitment to provide appropriate resources is an important pre-project activity</strong>.</p>
+<h3 id="4-2-Project"><a href="#4-2-Project" class="headerlink" title="4.2  Project"></a>4.2  Project</h3><p>This Section describes the following project stages in more detail:</p>
+<ul>
+<li>planning</li>
+<li>spectification, configration, and coding</li>
+<li>verification</li>
+<li>reporting and release</li>
+</ul>
+<p>The key supporting processes of risk management, change and configuration management, design review, traceabliliy, and document management also are described in this section.</p>
+<p>The stages are equally applicable to the project phases and to subsequence changes during operation.</p>
+<p><a href>Figure 4.1: Project Stages and Supporting Processes within the Life Cycle</a></p>
+<p>Each project stage typically involves multiple activities, planning for example may involve:</p>
+<ul>
+<li>preparing project plans</li>
+<li>developing requirements</li>
+<li>carring out supplier assessments</li>
+<li>defining extent and formality of verification activities</li>
+</ul>
+<p>While the project phase is made up of generally sequential stages, detailed activities often will be performed in parallel or with some overlap. For example, verification activities may occur through several stages.</p>
+<p>The deliverables produced during the execution of these stages <strong><em>provide the documentary evidence</em></strong> that the system is for its intended use. Some of these may be used by the regulated company during regulatory inspection to provide the jusification of the suitability of the system.</p>
+<h4 id="4-2-1-Planning"><a href="#4-2-1-Planning" class="headerlink" title="4.2.1  Planning"></a>4.2.1  Planning</h4><h4 id="4-2-2-Specification-Configuration-and-Coding"><a href="#4-2-2-Specification-Configuration-and-Coding" class="headerlink" title="4.2.2  Specification, Configuration, and Coding"></a>4.2.2  Specification, Configuration, and Coding</h4><h4 id="4-2-3-Verification"><a href="#4-2-3-Verification" class="headerlink" title="4.2.3  Verification"></a>4.2.3  Verification</h4><h4 id="4-2-4-Report-and-Release"><a href="#4-2-4-Report-and-Release" class="headerlink" title="4.2.4  Report and Release"></a>4.2.4  Report and Release</h4><h4 id="4-2-5-Supporting-Processes"><a href="#4-2-5-Supporting-Processes" class="headerlink" title="4.2.5  Supporting Processes"></a>4.2.5  Supporting Processes</h4><h4 id="4-2-6-Practice-Examples"><a href="#4-2-6-Practice-Examples" class="headerlink" title="4.2.6  Practice Examples"></a>4.2.6  Practice Examples</h4><h3 id="4-3-Operation"><a href="#4-3-Operation" class="headerlink" title="4.3  Operation"></a>4.3  Operation</h3><h4 id="4-3-1-Handover-Process"><a href="#4-3-1-Handover-Process" class="headerlink" title="4.3.1  Handover Process"></a>4.3.1  Handover Process</h4><h4 id="4-3-2-Service-Management-and-Performance-Mornitoring"><a href="#4-3-2-Service-Management-and-Performance-Mornitoring" class="headerlink" title="4.3.2  Service Management and Performance Mornitoring"></a>4.3.2  Service Management and Performance Mornitoring</h4><h4 id="4-3-3-Incident-Management-and-CAPA"><a href="#4-3-3-Incident-Management-and-CAPA" class="headerlink" title="4.3.3  Incident Management and CAPA"></a>4.3.3  Incident Management and CAPA</h4><h4 id="4-3-4-Change-Management"><a href="#4-3-4-Change-Management" class="headerlink" title="4.3.4  Change Management"></a>4.3.4  Change Management</h4><h4 id="4-3-5-Periodic-Review"><a href="#4-3-5-Periodic-Review" class="headerlink" title="4.3.5  Periodic Review"></a>4.3.5  Periodic Review</h4><h4 id="4-3-6-Continuity-Management"><a href="#4-3-6-Continuity-Management" class="headerlink" title="4.3.6  Continuity Management"></a>4.3.6  Continuity Management</h4><h4 id="4-3-7-Security-and-System-Administration"><a href="#4-3-7-Security-and-System-Administration" class="headerlink" title="4.3.7  Security and System Administration"></a>4.3.7  Security and System Administration</h4><h4 id="4-3-7-Record-Management"><a href="#4-3-7-Record-Management" class="headerlink" title="4.3.7  Record Management"></a>4.3.7  Record Management</h4><h3 id="4-4-Retirement"><a href="#4-4-Retirement" class="headerlink" title="4.4  Retirement"></a>4.4  Retirement</h3><h4 id="4-4-1-Withdrawal"><a href="#4-4-1-Withdrawal" class="headerlink" title="4.4.1  Withdrawal"></a>4.4.1  Withdrawal</h4><h4 id="4-4-1-Decommissioning"><a href="#4-4-1-Decommissioning" class="headerlink" title="4.4.1  Decommissioning"></a>4.4.1  Decommissioning</h4><h4 id="4-4-1-Disposal"><a href="#4-4-1-Disposal" class="headerlink" title="4.4.1  Disposal"></a>4.4.1  Disposal</h4><h4 id="4-4-1-Data-Migration"><a href="#4-4-1-Data-Migration" class="headerlink" title="4.4.1  Data Migration"></a>4.4.1  Data Migration</h4>
         </div>
 
         
